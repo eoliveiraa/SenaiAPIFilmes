@@ -1,7 +1,8 @@
 # SenaiAPIFilmes
 📌Bem-Vindo ao Projeto API Filmes  
 
-# - O projeto tem como foco apresentar sobre filmes e suas atribuções, como, genero, diretor, atores, dentre outras.
+- O projeto tem como foco apresentar sobre filmes e suas atribuções, como, genero, diretor, atores, dentre outras.
+#
 
 🚀 Começando 
 
