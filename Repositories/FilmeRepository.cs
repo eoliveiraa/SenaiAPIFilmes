@@ -83,11 +83,13 @@ namespace api_filmes_senai.Repositories
             }
         }
 
+        
+
         public List<Filme> Listar()
         {
             try
             {
-                List<Filme> listaDeFilmes = _context.Filme.ToList();
+                List<Filme> listaDeFilmes = _context.Filme.Include(g => g.Genero).ToList();
 
                 return listaDeFilmes;
             }
@@ -101,8 +103,11 @@ namespace api_filmes_senai.Repositories
         {
             try
             {
-                List<Filme> listaDeFilme = _context.Filme.Include(g => g.Genero).Where(f => f.IdGenero
-                == idGenero).ToList();
+                List<Filme> listaDeFilme = _context.Filme
+                    .Include(g => g.Genero)
+                    .Where(f => f.IdGenero == idGenero)
+                    .ToList();
+                return listaDeFilme;
             }
             catch (Exception)
             {

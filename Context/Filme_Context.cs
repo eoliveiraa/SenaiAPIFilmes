@@ -23,6 +23,8 @@ namespace api_filmes_senai.Context
 
         public DbSet<Filme> Filme { get; set; }
 
+        public DbSet<Usuario> Usuarios { get; set; }
+
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             if (!optionsBuilder.IsConfigured)
