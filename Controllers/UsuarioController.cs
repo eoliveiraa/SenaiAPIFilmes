@@ -35,5 +35,51 @@ namespace api_filmes_senai.Controllers
                 return BadRequest(error.Message);
             }
         }
+
+        [HttpGet("{id}")]
+
+        public IActionResult GetById(Guid id)
+        {
+            try
+            {
+                Usuario usuario = _usuarioRepository.BuscarPorId(id);
+
+                if (usuario != null)
+                {
+
+                    return Ok(usuario);
+                }
+                return null!;
+            }
+            catch (Exception e)
+            {
+                return BadRequest(e.Message);
+            }
+        }
+
+        //[HttpGet("BuscarPorEmailESenha")]
+
+        //public IActionResult GetByEmailAndSenha(string email, string senha)
+        //{
+        //    try
+        //    {
+        //        Usuario usuarioBuscado = _usuarioRepository.BuscarPorEmailESenha(email, senha);
+                
+        //        if (usuarioBuscado != null)
+        //        { 
+        //            return Ok(usuarioBuscado);
+        //        }
+        //        return null!;
+        //    }
+        //    catch (Exception e)
+        //    {
+
+        //        return BadRequest(e.Message);
+        //    }
+        //}
+
+
+
+
     }
 }
