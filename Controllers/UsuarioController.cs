@@ -1,6 +1,7 @@
 ﻿using api_filmes_senai.Domains;
 using api_filmes_senai.Interfaces;
 using api_filmes_senai.Repositories;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
@@ -19,6 +20,12 @@ namespace api_filmes_senai.Controllers
             _usuarioRepository = usuarioRepository;
         }
 
+        /// <summary>
+        /// Endpoint para Cadastrar o usuario
+        /// </summary>
+        /// <param name="usuario">id do usuario listado</param>
+        /// <returns>Usuario listado</returns>
+        [Authorize]
         [HttpPost]
 
         public IActionResult Post(Usuario usuario)
@@ -36,6 +43,11 @@ namespace api_filmes_senai.Controllers
             }
         }
 
+        /// <summary>
+        /// Endpoint para Buscar por id
+        /// </summary>
+        /// <param name="id">id do usuario buscado</param>
+        /// <returns>id do usuario</returns>
         [HttpGet("{id}")]
 
         public IActionResult GetById(Guid id)

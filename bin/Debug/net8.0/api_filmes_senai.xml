@@ -9,6 +9,62 @@
             Define que as tabelas se transformarao em tabelas no BD
             </summary>
         </member>
+        <member name="M:api_filmes_senai.Controllers.FilmeController.Get">
+            <summary>
+            Endpoint para listar filme
+            </summary>
+            param
+            <returns></returns>
+        </member>
+        <member name="M:api_filmes_senai.Controllers.FilmeController.Post(api_filmes_senai.Domains.Filme)">
+            <summary>
+            Endpoint para Cadastrar novo filme
+            </summary>
+            <param name="novoFilme">id do novo filme</param>
+            <returns>Filme Cadastrado</returns>
+        </member>
+        <member name="M:api_filmes_senai.Controllers.FilmeController.GetById(System.Guid)">
+            <summary>
+            Endpoint para buscar o filme pelo id
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:api_filmes_senai.Controllers.FilmeController.Put(System.Guid,api_filmes_senai.Domains.Filme)">
+            <summary>
+            Endpoint para atualizar o filme
+            </summary>
+            <param name="id"></param>
+            <param name="filme"></param>
+            <returns></returns>
+        </member>
+        <member name="M:api_filmes_senai.Controllers.FilmeController.Delete(System.Guid)">
+            <summary>
+            Endpoint para deletar um filme
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:api_filmes_senai.Controllers.FilmeController.GetByGenero(System.Guid)">
+            <summary>
+            Endpoint para Listar por genero
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:api_filmes_senai.Controllers.GeneroController.Get">
+            <summary>
+            Endpoint para Listar seu genero
+            </summary>
+            <returns>Genero Listado</returns>
+        </member>
+        <member name="M:api_filmes_senai.Controllers.GeneroController.Post(api_filmes_senai.Domains.Genero)">
+            <summary>
+            Endpoint para Cadastrar seu genero
+            </summary>
+            <param name="novoGenero">id do genero cadastrado</param>
+            <returns>Genero cadastrado</returns>
+        </member>
         <member name="M:api_filmes_senai.Controllers.GeneroController.GetById(System.Guid)">
             <summary>
             Endpoint para buscar um genero pelo seu id
@@ -16,7 +72,42 @@
             <param name="id">id do genero buscado</param>
             <returns>Genero Buscado</returns>
         </member>
-        <!-- Badly formed XML comment ignored for member "M:api_filmes_senai.Controllers.GeneroController.Delete(System.Guid)" -->
+        <member name="M:api_filmes_senai.Controllers.GeneroController.Delete(System.Guid)">
+            <summary>
+            Endpoint para deletar um genero
+            </summary>
+            <param name="id">id do genero deletado</param>
+            <returns>Genero deletado</returns>
+        </member>
+        <member name="M:api_filmes_senai.Controllers.GeneroController.Put(System.Guid,api_filmes_senai.Domains.Genero)">
+            <summary>
+            Endpoint para atualizar os generos
+            </summary>
+            <param name="id">id do genero atualizado</param>
+            <param name="genero"></param>
+            <returns>Genero atulizado</returns>
+        </member>
+        <member name="M:api_filmes_senai.Controllers.LoginController.Login(api_filmes_senai.DTO.LoginDTO)">
+            <summary>
+            Endpoint para login
+            </summary>
+            <param name="loginDTO"></param>
+            <returns></returns>
+        </member>
+        <member name="M:api_filmes_senai.Controllers.UsuarioController.Post(api_filmes_senai.Domains.Usuario)">
+            <summary>
+            Endpoint para Cadastrar o usuario
+            </summary>
+            <param name="usuario">id do usuario listado</param>
+            <returns>Usuario listado</returns>
+        </member>
+        <member name="M:api_filmes_senai.Controllers.UsuarioController.GetById(System.Guid)">
+            <summary>
+            Endpoint para Buscar por id
+            </summary>
+            <param name="id">id do usuario buscado</param>
+            <returns>id do usuario</returns>
+        </member>
         <member name="P:api_filmes_senai.Domains.Filme.IdGenero">
             <summary>
             Referencia da tabela Genero

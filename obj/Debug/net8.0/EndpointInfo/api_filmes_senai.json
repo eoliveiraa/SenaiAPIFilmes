@@ -20,6 +20,7 @@
         "tags": [
           "Filme"
         ],
+        "summary": "Endpoint para listar filme",
         "responses": {
           "200": {
             "description": "OK"
@@ -30,7 +31,9 @@
         "tags": [
           "Filme"
         ],
+        "summary": "Endpoint para Cadastrar novo filme",
         "requestBody": {
+          "description": "id do novo filme",
           "content": {
             "application/json": {
               "schema": {
@@ -59,10 +62,12 @@
         "tags": [
           "Filme"
         ],
+        "summary": "Endpoint para atualizar o filme",
         "parameters": [
           {
             "name": "id",
             "in": "query",
+            "description": "",
             "schema": {
               "type": "string",
               "format": "uuid"
@@ -70,6 +75,7 @@
           }
         ],
         "requestBody": {
+          "description": "",
           "content": {
             "application/json": {
               "schema": {
@@ -100,10 +106,12 @@
         "tags": [
           "Filme"
         ],
+        "summary": "Endpoint para buscar o filme pelo id",
         "parameters": [
           {
             "name": "id",
             "in": "path",
+            "description": "",
             "required": true,
             "schema": {
               "type": "string",
@@ -123,10 +131,12 @@
         "tags": [
           "Filme"
         ],
+        "summary": "Endpoint para deletar um filme",
         "parameters": [
           {
             "name": "id",
             "in": "path",
+            "description": "",
             "required": true,
             "schema": {
               "type": "string",
@@ -146,10 +156,12 @@
         "tags": [
           "Filme"
         ],
+        "summary": "Endpoint para Listar por genero",
         "parameters": [
           {
             "name": "id",
             "in": "path",
+            "description": "",
             "required": true,
             "schema": {
               "type": "string",
@@ -169,6 +181,7 @@
         "tags": [
           "Genero"
         ],
+        "summary": "Endpoint para Listar seu genero",
         "responses": {
           "200": {
             "description": "OK"
@@ -179,7 +192,9 @@
         "tags": [
           "Genero"
         ],
+        "summary": "Endpoint para Cadastrar seu genero",
         "requestBody": {
+          "description": "id do genero cadastrado",
           "content": {
             "application/json": {
               "schema": {
@@ -235,10 +250,12 @@
         "tags": [
           "Genero"
         ],
+        "summary": "Endpoint para deletar um genero",
         "parameters": [
           {
             "name": "id",
             "in": "path",
+            "description": "id do genero deletado",
             "required": true,
             "schema": {
               "type": "string",
@@ -256,10 +273,12 @@
         "tags": [
           "Genero"
         ],
+        "summary": "Endpoint para atualizar os generos",
         "parameters": [
           {
             "name": "id",
             "in": "path",
+            "description": "id do genero atualizado",
             "required": true,
             "schema": {
               "type": "string",
@@ -268,6 +287,7 @@
           }
         ],
         "requestBody": {
+          "description": "",
           "content": {
             "application/json": {
               "schema": {
@@ -298,7 +318,9 @@
         "tags": [
           "Login"
         ],
+        "summary": "Endpoint para login",
         "requestBody": {
+          "description": "",
           "content": {
             "application/json": {
               "schema": {
@@ -329,7 +351,9 @@
         "tags": [
           "Usuario"
         ],
+        "summary": "Endpoint para Cadastrar o usuario",
         "requestBody": {
+          "description": "id do usuario listado",
           "content": {
             "application/json": {
               "schema": {
@@ -360,10 +384,12 @@
         "tags": [
           "Usuario"
         ],
+        "summary": "Endpoint para Buscar por id",
         "parameters": [
           {
             "name": "id",
             "in": "path",
+            "description": "id do usuario buscado",
             "required": true,
             "schema": {
               "type": "string",
@@ -470,6 +496,19 @@
         },
         "additionalProperties": false
       }
+    },
+    "securitySchemes": {
+      "Bearer": {
+        "type": "apiKey",
+        "description": "Value: Bearer TokenJWT ",
+        "name": "Authorization",
+        "in": "header"
+      }
     }
-  }
+  },
+  "security": [
+    {
+      "Bearer": [ ]
+    }
+  ]
 }
